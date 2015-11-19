@@ -1,0 +1,9 @@
+<h1><%= @work.title %> (<%= @work.year %>)</h1>
+<h2><%= @work.artist %></h2>
+
+<div>
+<img src="<%= @work.media_type %>">
+<div>
+
+<%= link_to "Edit", works_path(@work) %> |
+<%= link_to "All Works", edit_work_path(@work) %>

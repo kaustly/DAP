@@ -49,6 +49,9 @@ ActiveRecord::Schema.define(version: 20151118212614) do
   create_table "works", force: :cascade do |t|
     t.boolean  "public"
     t.string   "media_type"
+    t.string   "title"
+    t.string   "artist"
+    t.integer  "year"
     t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
