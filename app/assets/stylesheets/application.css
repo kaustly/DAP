@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+ a.dig {
+   text-decoration: none;
+   color: red;
+ }
+
+ a.no-dig {
+   text-decoration: none;
+   color: black;
+ }
+
+ .dig:visited, .no-dig:visited {
+   text-decoration: none;
+ }
