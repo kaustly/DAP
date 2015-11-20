@@ -1,8 +1,8 @@
 <h1> works </h1>
 
-<ul>
+<ul class="list-group">
   <% @works.each do |work| %>
-    <li><%= link_to work.title, work_path(work) %></li>
+    <li class="list-group-item"><%= link_to work.title, work_path(work) %></li>
   <% end %>
 </ul>
 
