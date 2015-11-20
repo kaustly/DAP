@@ -12,8 +12,6 @@ class WorksController < ApplicationController
   end
 
   def create
-    @work = Work.new(work_params)
-    authorize! :create, @work
     @work.user = current_user
     if @work.save
       redirect_to(work_path(@work))
@@ -23,13 +21,9 @@ class WorksController < ApplicationController
   end
 
   def edit
-    @work = Work.find(params[:id])
-    authorize! :update, @work
   end
 
   def update
-    @work = Work.find(params[:id])
-    authorize! :update, @work
     if @work.update(work_params)
       redirect_to(work_path(@work))
     else
@@ -38,8 +32,6 @@ class WorksController < ApplicationController
   end
 
   def destroy
-    @work = Work.find(params[:id])
-    authorize! :destroy, @work
     @work.destroy
     redirect_to(works_path)
   end

@@ -4,6 +4,8 @@
 <div>
 <img src="<%= @work.media_type %>">
 <div>
+<% if can? :update, @work %>
+  <%= link_to "Edit", edit_work_path(@work) %>
+<% end %>
 
-<%= link_to "Edit", edit_work_path(@work) %> |
 <%= link_to "All Works", works_path(@work) %>
