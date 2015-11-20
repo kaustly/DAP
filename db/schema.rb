@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 20151118212614) do
 
   add_index "works", ["user_id"], name: "index_works_on_user_id", using: :btree
 
-  add_foreign_key "digs", "users"
-  add_foreign_key "digs", "works"
-  add_foreign_key "works", "users"
+  #add_foreign_key "digs", "users"
+  #add_foreign_key "digs", "works"
+  #add_foreign_key "works", "users"
 end
