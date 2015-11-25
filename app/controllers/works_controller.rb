@@ -12,6 +12,8 @@ class WorksController < ApplicationController
   end
 
   def create
+    # I was surprised that this works, given that you don't have @work = Work.create...
+    # but I guess `load_and_authorize_resource` takes care of that part for you.
     @work.user = current_user
     if @work.save
       redirect_to(work_path(@work))
