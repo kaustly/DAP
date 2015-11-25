@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :works
+  # I'd suggest removing the comments below. They make it hard to find your
+  # root route (I almost didn't see it.)
 
-  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

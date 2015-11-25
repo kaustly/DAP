@@ -2,10 +2,16 @@
 <h2><%= @work.artist %></h2>
 
 <div>
+  <!-- you should use the rails `image_tag` helper here.
+      also, it's a bit confusing that you're using the media_type attribute
+      here, where I would expect that to be a string like "image" or "video",
+      and that you'd use a media_url attribute to store the actual image location
+   -->
   <img src="<%= @work.media_type %>">
 </div>
 
 
+<!-- nice use of cancancan -->
 <% if can? :update, @work %>
   <%= link_to "Edit", edit_work_path(@work) %>
 <% end %>

@@ -46,6 +46,9 @@ group :development, :test do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   #gem 'spring'
 
+  # I'm surprised this works. You've nested your production gems inside your
+  # development gems do...end (from line 39). This should be outside of that
+  # block.
   group :production do
   gem 'rails_12factor'
 end
