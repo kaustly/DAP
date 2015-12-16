@@ -5,8 +5,19 @@
   <img src="<%= @work.media_type %>">
 </div>
 
+<ul>
+  <% @work %>
+  <li>
+    <% if @work.digged_works.length > 0 %>
+    <%= link_to "&hearts;".html_safe, remove_dig_work_path(@work), method: :delete, class: "dig" %>
+    <% else %>
+    <%= link_to "&hearts;".html_safe, add_dig_work_path(@work), method: :post, class: "no-dig" %>
+    <% end %>
+  </li>
+</ul>
+
 
 <% if can? :update, @work %>
-  <%= link_to "Edit", edit_work_path(@work) %>
+<%= link_to "Edit", edit_work_path(@work) %>
 <% end %>
 <%= link_to "All Works", works_path(@work) %>
