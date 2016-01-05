@@ -2,10 +2,10 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :read, Work, :message => "access denied"
+    can :read, Work
 
     if user
-      can :create, Work, :message => "access denied"
+      can :create, Work
       can [:update, :destroy], Work do |work|
         user.id == work.user_id
       end
