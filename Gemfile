@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 gem 'cancancan', '~> 1.10'
 
 gem 'devise'
+
+gem "font-awesome-rails"
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use postgresql as the database for Active Record
