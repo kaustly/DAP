@@ -6,7 +6,7 @@ class Ability
 
     if user
       can :create, Work
-      can [:update, :destroy], Work do |work|
+      can [:update, :destroy, :add_dig, :remove_dig], Work do |work|
         user.id == work.user_id
       end
     end

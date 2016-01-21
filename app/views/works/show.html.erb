@@ -7,13 +7,15 @@
 
 <ul>
   <% @work %>
-  <li>
+  <p>
+    <% if can? :add_dig, @work %>
     <% if @work.digged_works.length > 0 %>
     <%= link_to "&hearts;".html_safe, remove_dig_work_path(@work), method: :delete, class: "dig" %>
     <% else %>
     <%= link_to "&hearts;".html_safe, add_dig_work_path(@work), method: :post, class: "no-dig" %>
     <% end %>
-  </li>
+    <% end %>
+  </p>
 </ul>
 
 

@@ -2,6 +2,7 @@ class WorksController < ApplicationController
   load_and_authorize_resource
   # before_action :set_work, only: [:show, :edit, :update, :destroy]
   # before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+
   def index
   end
 
@@ -36,6 +37,21 @@ class WorksController < ApplicationController
     redirect_to(works_path)
   end
 
+  def add_dig
+    @work = Work.find(params[:id])
+    @user = @work.user
+    @work.digged_works.create(user:current_user)
+    redirect_to work_path(@work)
+  end
+
+  def remove_dig
+    @work = Work.find(params[:id])
+    @user = @work.user
+    @work.digged_works.where(user:current_user).destroy_all
+    redirect_to work_path(@work)
+  end
+
+  private
   def work_params
     params.require(:work).permit(:title, :year, :artist, :media_type)
   end
