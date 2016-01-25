@@ -1,6 +1,5 @@
 class User < ActiveRecord::Base
   has_many :works, dependent: :destroy
-
   has_many :digged_works
   has_many :digs, class_name: 'Work', through: :digged_works, source: :work
 

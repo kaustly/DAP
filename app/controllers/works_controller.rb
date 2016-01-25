@@ -1,7 +1,7 @@
 class WorksController < ApplicationController
   load_and_authorize_resource
   # before_action :set_work, only: [:show, :edit, :update, :destroy]
-  # before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :add_dig, :remove_dig]
 
   def index
   end
