@@ -39,14 +39,12 @@ class WorksController < ApplicationController
 
   def add_dig
     @work = Work.find(params[:id])
-    @user = @work.user
     @work.digged_works.create(user:current_user)
     redirect_to work_path(@work)
   end
 
   def remove_dig
     @work = Work.find(params[:id])
-    @user = @work.user
     @work.digged_works.where(user:current_user).destroy_all
     redirect_to work_path(@work)
   end
