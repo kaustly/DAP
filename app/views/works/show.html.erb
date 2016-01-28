@@ -20,6 +20,6 @@
 
 
 <% if can? :update, @work %>
-<%= link_to "Edit", edit_work_path(@work) %>
+<%= link_to "edit", edit_work_path(@work) %>
 <% end %>
-<%= link_to "All Works", works_path(@work) %>
+<%= link_to "back", root_path(@work) %>
