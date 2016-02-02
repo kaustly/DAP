@@ -5,11 +5,14 @@
     <div class="col-xs-6 col-md-3">
       <a href="#" class="thumbnail">
         <img src="<%= work.media_type %>">
+        <%= link_to work.title, work_path(work) %>
       </a>
     </div>
   <% end %>
 
 </div>
+
+
 
 
 
