@@ -4,3 +4,5 @@ class DiggedWorkController < ApplicationController
 def index
   @digs = current_user.digged_works
 end
+
+end
