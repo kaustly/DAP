@@ -1,12 +1,13 @@
-<h1><%= @work.title %> (<%= @work.year %>)</h1>
-<h2><%= @work.artist %></h2>
+<div class="center jumbotron" style="background-color:transparent !important">
+<div class="center"><h2><%= @work.title %> (<%= @work.year %>)</h2></div>
+<br>
+<div class="center-block" style = "width:350px"><h2><%= @work.artist %></h2></div>
 
 <div>
   <img src="<%= @work.media_type %>">
 </div>
 
-<ul>
-  <p>
+  <div>
     <% if can? :add_dig, @work %>
       <% if @work.digged_works.where(user: current_user).length > 0 %>
         <%= link_to "&hearts;".html_safe, remove_dig_work_path(@work), method: :delete, class: "dig" %>
@@ -14,11 +15,13 @@
         <%= link_to "&hearts;".html_safe, add_dig_work_path(@work), method: :post, class: "no-dig" %>
       <% end %>
     <% end %>
-  </p>
-</ul>
-
+  </div>
 
 <% if can? :update, @work %>
-<%= link_to "edit", edit_work_path(@work) %>
+<div class="btn-group">
+<%= link_to "edit", edit_work_path(@work), class: "btn btn-default btn-sm" %>
 <% end %>
-<%= link_to "back", root_path(@work) %>
+<tr>
+<%= link_to "back", root_path(@work), class: "btn btn-default btn-sm" %>
+</div>
+</div>

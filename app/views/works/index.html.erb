@@ -1,5 +1,5 @@
-<h1>                                 recent  u p l o a d s </h1>
-
+<div class="center-block" style = "width:400px"><h1>recent u p l o a d s </h1></div>
+<br>
 <div class="row">
   <% @works.each do |work| %>
     <div class="col-xs-6 col-md-3">
@@ -12,15 +12,11 @@
 
 </div>
 
+<br>
+<br>
 
-
-
-
-
-
-
-
-
+<div class="btn-group pull-right">
 <% if can? :create, Work %>
-<%= link_to "add work", new_work_path %>
+<%= link_to "add work", new_work_path, class: "btn btn-default btn-sm" %>
 <% end %>
+</div>

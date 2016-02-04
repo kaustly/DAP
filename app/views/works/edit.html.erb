@@ -1,5 +1,10 @@
-<h1> e d i t </h1>
+
+<div class="center-block" style = "width:700px"><h1> e d i t </h1>
 
 <%= render "form" %>
+<br>
+<div class="btn-group">
+<%= link_to "delete", work_path(@work), class: "btn btn-warning", method: :delete %>
+</div>
 
-<%= link_to "delete", work_path(@work), method: :delete %>
+</div>

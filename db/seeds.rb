@@ -15,4 +15,4 @@ user3 = User.create(email: "user3@example.com", password: "12334567", password_c
 
 work1 = Work.create(public: true, media_type: "http://www.moma.org/explore/inside_out/inside_out/wp-content/uploads/2012/04/FGT_Manhattan_sized-643x428.jpg", title: "Untitled", artist: "Felix Gonzalez-Torres", year: 1991, user: user1)
 work2 = Work.create(public: true, media_type: "http://media-cache-ak0.pinimg.com/736x/da/3c/da/da3cda5830f2f075151754aa7b7751a2.jpg", title: "Untitled (Toronto)", artist: "Felix Gonzalez-Torres", year: 1992, user: user2)
-work3 = Work.create(public: true, media_type: "http://s3.amazonaws.com/contemporaryartgroup/wp-content/uploads/2011/02/Untitled_USA-Today_-1990-.jpg", title: "Untitled (USA Today)", artist: "Felix Gonzalez-Torres", year: 1990, user: user3)
+work3 = Work.create(public: true, media_type: "http://erhard-metz.de/wp-content/uploads/L1007253-600.jpg", title: "Untitled (USA Today)", artist: "Felix Gonzalez-Torres", year: 1990, user: user3)
