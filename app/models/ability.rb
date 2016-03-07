@@ -4,7 +4,6 @@ class Ability
   def initialize(user)
     can :read, Work
 
-
     if user
       can [:add_dig, :remove_dig], Work
       can :create, Work
@@ -12,6 +11,5 @@ class Ability
         user.id == work.user_id
       end
     end
-
   end
 end
