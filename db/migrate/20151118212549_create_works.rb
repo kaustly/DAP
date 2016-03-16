@@ -2,6 +2,7 @@ class CreateWorks < ActiveRecord::Migration
   def change
     create_table :works do |t|
       t.boolean :public
+      t.string :info
       t.string :media_type
       t.string :title
       t.string :artist

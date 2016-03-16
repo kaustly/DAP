@@ -51,6 +51,6 @@ class WorksController < ApplicationController
 
   private
   def work_params
-    params.require(:work).permit(:title, :year, :artist, :media_type)
+    params.require(:work).permit(:title, :year, :artist, :media_type, :info)
   end
 end

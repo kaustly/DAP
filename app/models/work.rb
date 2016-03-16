@@ -6,6 +6,7 @@ class Work < ActiveRecord::Base
 
   #validates :public, { presence: true }
   validates :media_type, { presence: true }
+  validates :info, { presence: true}
   validates :title, { presence: true }
   validates :artist, { presence: true }
   validates :year, numericality: { only_integer: true }
