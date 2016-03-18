@@ -1,10 +1,12 @@
-<div class="center jumbotron" style="background-color:transparent !important">
+<div style="background-color:transparent !important">
 <div class="center"><h2><%= @work.title %> (<%= @work.year %>)</h2></div>
-<br>
-<div class="center-block" style = "width:350px"><h2><%= @work.artist %></h2></div>
 
-<div>
-  <img src="<%= @work.media_type %>">
+<ul class="center-block" ><h3><%= @work.artist %></h3></ul>
+
+< class="left-block"><img src="<%= @work.media_type %>">
+</span>
+<div class="right-block" style = "width:350px">
+  <h4><%= @work.info %></h4>
 </div>
 
   <div>
